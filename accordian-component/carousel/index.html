@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            width: 700px;
+            height: 250px;
+            border: 1px solid black;
+            margin: 50px auto;
+            border-radius: 4px;
+            display: flex;
+            background-color: #343a40;
+            position: relative;
+        }
+
+        img {
+            height: 100%;
+            scale: 1.1;
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 30px;
+            font-size: 24px;
+            line-height: 1.7;
+            color: white;
+        }
+
+        /*.arrow-btn {*/
+        /*    border: 1px solid white;*/
+        /*}*/
+
+        .arrow-btn > svg {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            color: black;
+            border-radius: 50%;
+            background-color: white;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+
+        .arrow-btn > svg:nth-child(1) {
+            left: -3%;
+        }
+
+        .arrow-btn > svg:nth-child(2) {
+            right: -3%;
+        }
+
+        .button-pointer {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            display: flex;
+            gap: 10px;
+            border: 1px solid white;
+            transform: translateX(-50%);
+        }
+
+        .button-pointer > div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://mcdn.wallpapersafari.com/small/21/43/gJiPnA.png" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur, cum debitis distinctio ea inventore
+        nostrum numquam placeat porro ratione.</p>
+    <div class="arrow-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+                  d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+                  clip-rule="evenodd"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+                  d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                  clip-rule="evenodd"/>
+        </svg>
+
+    </div>
+    <div class="button-pointer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</body>
+</html>
